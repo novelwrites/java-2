@@ -2,6 +2,7 @@ package com.learningjava;
 
 public class PlainHamburger {
 
+    private String burgerType;
     private String breadRollType;
     private String meat;
     private String topping1; //Need the possibility for eight different toppings on same burger
@@ -17,9 +18,11 @@ public class PlainHamburger {
 
     //Initialize values of object
 
-    public PlainHamburger (String breadRollType, String meat, String topping1, String topping2,
-                           String topping3, String topping4, String topping5, String topping6,
-                           String topping7, String topping8,int numberToppings, double plainBurgerPrice) {
+    public PlainHamburger(String burgerType, String breadRollType, String meat, String topping1, String topping2,
+                          String topping3, String topping4, String topping5, String topping6,
+                          String topping7, String topping8, int numberToppings, double plainBurgerPrice) {
+
+        this.burgerType = burgerType;
         this.breadRollType = breadRollType;
         this.meat = meat;
         this.topping1 = topping1;
@@ -38,11 +41,57 @@ public class PlainHamburger {
 
     public void burgerPrice() { //calculates burger price
 
-        System.out.println("This plain hamburger without toppings costs " + plainBurgerPrice);
-        this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
-        double toppingsBurgerPrice = this.plainBurgerPrice;
-        System.out.println("This plain hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
+        //System.out.println("A plain hamburger without toppings costs " + plainBurgerPrice);
+        //this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
+        String burgerType = "healthyBurger"; //Choose Plain ("plainBurger"), Healthy ("healthyBurger") or Deluxe Burger ("deluxeBurger")
+        switch (burgerType) {
+            case "plainBurger":
 
+                this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
+                if (this.plainBurgerPrice > 4.69) { //price of burger plus two toppings
+                    System.out.println("Sorry, you are only allowed up to two toppings on the plain hamburger");
+                } else {
+                    double toppingsBurgerPrice = this.plainBurgerPrice;
+                    System.out.println("This plain hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
+
+                }
+
+                break;
+
+            case "healthyBurger":
+                Class HealthyBurger;
+                this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
+                if (this.plainBurgerPrice > 5.89) //price of burger plus four toppings
+
+                {
+                    System.out.println("Sorry, you are only allowed up to four toppings on the healthy hamburger");
+                } else {
+                    double toppingsBurgerPrice = this.plainBurgerPrice;
+                    System.out.println("This healthy hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
+                }
+                break;
+            case "deluxeBurger":
+                Class DeluxeBurger;
+                this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
+                if (this.plainBurgerPrice > 9.49) //price of burger plus eight toppings
+
+                {
+                    System.out.println("Sorry, you are only allowed up to eight toppings on the deluxe hamburger");
+                } else {
+                    double toppingsBurgerPrice = this.plainBurgerPrice;
+                    System.out.println("This deluxe hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
+                }
+                break;
+
+        }
+    }
+
+    public String getBurgerType() {
+        return burgerType;
+    }
+
+    public void setBurgerType(String burgerType) {
+        this.burgerType = burgerType;
     }
 
     public String getBreadRollType() {
