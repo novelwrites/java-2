@@ -17,6 +17,6 @@ PlainHamburger pricing = new PlainHamburger("sesame seed bun", "shredded chicken
 
 
 
-        //pricing.burgerPrice(3.49);
+        pricing.burgerPrice();
     }
 }

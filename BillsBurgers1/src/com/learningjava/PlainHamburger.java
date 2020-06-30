@@ -38,10 +38,10 @@ public class PlainHamburger {
 
     public void burgerPrice() { //calculates burger price
 
-        System.out.println("This plain hamburger without toppings costs" + plainBurgerPrice);
+        System.out.println("This plain hamburger without toppings costs " + plainBurgerPrice);
         this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
         double toppingsBurgerPrice = this.plainBurgerPrice;
-        System.out.println("This plain hamburger has " + numberToppings + "toppings and costs " + toppingsBurgerPrice);
+        System.out.println("This plain hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
 
     }
 
