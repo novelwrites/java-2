@@ -43,13 +43,13 @@ public class PlainHamburger {
 
         //System.out.println("A plain hamburger without toppings costs " + plainBurgerPrice);
         //this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
-        String burgerType = "healthyBurger"; //Choose Plain ("plainBurger"), Healthy ("healthyBurger") or Deluxe Burger ("deluxeBurger")
+        String burgerType = "plainBurger"; //Choose Plain ("plainBurger"), Healthy ("healthyBurger") or Deluxe Burger ("deluxeBurger")
         switch (burgerType) {
             case "plainBurger":
-
+                this.plainBurgerPrice = 3.49;
                 this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
                 if (this.plainBurgerPrice > 4.69) { //price of burger plus two toppings
-                    System.out.println("Sorry, you are only allowed up to two toppings on the plain hamburger");
+                    //System.out.println("Sorry, you are only allowed up to two toppings on the plain hamburger");
                 } else {
                     double toppingsBurgerPrice = this.plainBurgerPrice;
                     System.out.println("This plain hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
@@ -59,7 +59,8 @@ public class PlainHamburger {
                 break;
 
             case "healthyBurger":
-                Class HealthyBurger;
+                //Class HealthyBurger;
+                this.plainBurgerPrice = 3.49;
                 this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
                 if (this.plainBurgerPrice > 5.89) //price of burger plus four toppings
 
@@ -70,8 +71,10 @@ public class PlainHamburger {
                     System.out.println("This healthy hamburger has " + numberToppings + " toppings and costs " + toppingsBurgerPrice);
                 }
                 break;
-            case "deluxeBurger":
-                Class DeluxeBurger;
+
+                case "deluxeBurger":
+                //Class DeluxeBurger;
+                    this.plainBurgerPrice = 3.49;
                 this.plainBurgerPrice += (numberToppings * .60); //calculate price with toppings
                 if (this.plainBurgerPrice > 9.49) //price of burger plus eight toppings
 

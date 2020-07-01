@@ -56,6 +56,17 @@ PlainHamburger pricing = new PlainHamburger("plainBurger","sesame seed bun", "sh
         Meat.meat();
         Side.side();
 
+PlainHamburger burger = new PlainHamburger("plainBurger","sesame seed bun", "shredded chicken",
+        "ranch dressing", "tomatos", "", "",
+        "", "", "", "", 2,3.49);
+
+Drink drink = new Drink("coke", "gatorade", "sprite", "beer");
+
+Side side = new Side("french fries", "chips", "potato salad");
+
+Meal theMeal = new Meal(burger, drink, side);
+
+        System.out.println(theMeal);
 
     }
 
